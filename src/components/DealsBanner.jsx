@@ -4,7 +4,7 @@ const DealsBanner = () => {
       <div className="text-center space-y-4">
         <p className="text-2xl font-bold">CHECK OUT DEALS ON REFURBISHED BUILDS</p>
         <button className="bg-white text-teal-500 px-4 py-2 rounded font-semibold">
-          LEARN MORE &gt;
+          LEARN MORE
         </button>
       </div>
     </section>

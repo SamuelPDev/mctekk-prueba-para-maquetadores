@@ -12,7 +12,7 @@ const Topics = () => {
           LEARN MORE &gt;
         </button>
 
-        <img src={ninja} className="w-3/4 h-auto self-center mt-4" />
+        <img src={ninja} alt="NINJA" className="w-3/4 h-auto self-center mt-4" />
       </div>
       <div className="flex flex-col w-full aspect-video align-items-center p-4  bg-cover bg-center bg-[url('../assets/Group9.jpg')]">
         <h1 className=" text-2xl text-white text-center">
@@ -22,7 +22,7 @@ const Topics = () => {
           LEARN MORE &gt;
         </button>
 
-        <img src={pubg} className="w-3/4 h-auto self-center mt-4" />
+        <img src={pubg} alt="PUBG" className="w-3/4 h-auto self-center mt-4" />
       </div>
     </div>
   );

@@ -3,6 +3,26 @@ import bldLogo from "../assets/logo-white.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const buttons =[
+    {
+      "nombre": "WHAT IS BLD",
+      "href": "#P3L",
+      "target": "_blank"
+    },
+    {
+      "nombre": "CUSTOMER REVIEWS",
+      "href": "#P3L"
+    },
+    {
+      "nombre": "SUPPORT",
+      "href": "#P3L"
+    },
+    {
+      "nombre": "FAQ",
+      "href": "#P3L"
+    }
+  ];
+
 
   return (
     <header className="w-full flex flex-col bg-teal-400 pin-t pin-r pin-l">
@@ -37,35 +57,20 @@ const Navbar = () => {
             isOpen ? "flex" : "hidden"
           }`}
         >
-          <a
-            className="text-white hover:underline text-lg w-full sm:w-auto sm:pr-4 py-2 sm:py-1 sm:pt-2"
-            href="#P3L"
-            target="_blank"
-          >
-            WHAT IS BLD
-          </a>
-          <a
-            className="text-white hover:underline text-lg w-full sm:w-auto sm:pr-4 py-2 sm:py-1 sm:pt-2"
-            href="#P3L"
-          >
-            CUSTOMER REVIEWS
-          </a>
-          <a
-            className="text-white hover:underline text-lg w-full sm:w-auto sm:pr-4 py-2 sm:py-1 sm:pt-2"
-            href="#P3L"
-          >
-            SUPPORT
-          </a>
-          <a
-            className="text-white hover:underline text-lg w-full sm:w-auto sm:pr-4 py-2 sm:py-1 sm:pt-2"
-            href="#P3L"
-          >
-            FAQ
-          </a>
+          {buttons.map((button, index) => (
+            <a
+              key={index}
+              className="text-white hover:underline text-lg w-full sm:w-auto sm:pr-4 py-2 sm:py-1 sm:pt-2"
+              href={button.href}
+              target={button.target}
+            >
+              {button.nombre}
+            </a>
+          ))}
           <button className="bg-teal-400 text-white py-2 px-4 rounded border border-white border-solid">
             GET STARTED
           </button>
-        </div>
+          </div>
       </nav>
     </header>
   );
